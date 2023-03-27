@@ -16,9 +16,9 @@ while [ $LOOP -le 2 ]
 do
 	cat monster.txt
 	echo
-	echo Hunger:   $HUNGER
-	echo Fun:      $FUN
-	echo Cleaness: $CLEAN
+	echo Hunger:      $HUNGER
+	echo Fun:         $FUN
+	echo Cleanliness: $CLEAN
 	echo
 	if [ $HUNGER -le 30 ]
 	then
