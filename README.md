@@ -18,6 +18,7 @@ Press H, F or C to Feed, Play with or Wash your monster.
 * More looks for monster - reaction for being hungry, bored etc
 * Support for translansions
 * Support for animations
+* Colors!
 
 # Cheats
 
