@@ -16,4 +16,5 @@ Press H, F or C to Feed, Play with or Wash your monster.
 # Cheats
 
 Edit `data.txt`.
+(First run `main.sh` - it will generate data.txt)
 
