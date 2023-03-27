@@ -13,6 +13,12 @@ Bored of ASCII Kitty? Then edit `monster.txt` and make your own monster beyond h
 
 Press H, F or C to Feed, Play with or Wash your monster.
 
+# Future Plans
+
+* More looks for monster - reaction for being hungry, bored etc
+* Support for translansions
+* Support for animations
+
 # Cheats
 
 Edit `data.txt`.
