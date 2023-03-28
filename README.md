@@ -19,6 +19,7 @@ Press H, F or C to Feed, Play with or Wash your monster.
 * Support for translansions
 * Support for animations
 * ~~Colors!~~ - Done!
+* Bibows (ha tfu) release 
 
 # Cheats
 
