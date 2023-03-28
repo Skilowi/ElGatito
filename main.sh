@@ -11,7 +11,103 @@ then
 	echo -e \\nNO MONSTER! EDIT monster.txt TO CREATE YOUR OWN ASCII MONSTER OR DOWNLOAD EL GATITO FROM github.com/Skilowi/ElGatito > monster.txt
 fi
 source data.txt
+LOOP=1#!/bin/bash
+clear
+if [ ! -f "data.txt" ]
+then
+	touch data.txt
+	echo -e HUNGER=50 \\nFUN=50 \\nCLEAN=50 > data.txt
+fi
+if [ ! -f "monster.txt" ]
+then
+	touch monster.txt
+	echo -e \\nNO MONSTER! EDIT monster.txt TO CREATE YOUR OWN ASCII MONSTER OR DOWNLOAD EL GATITO FROM \\e[94mgithub.com/Skilowi/ElGatito\\e[0m > monster.txt
+fi
+source data.txt
 LOOP=1
+while [ $LOOP -le 2 ]
+do
+	cat monster.txt
+	echo
+	echo -e "\e[92mHunger:\\e[0m      $HUNGER"
+	echo -e "\e[33mFun:\\e[0m         $FUN"
+	echo -e "\e[94mCleanliness:\\e[0m $CLEAN"
+	echo
+	if [ $HUNGER -le 30 ]
+	then
+		echo -e "\e[31mI am hungry!!!\e[0m"
+	fi
+	if [ $FUN -le 30 ]
+	then
+		echo -e "\e[31mPlay with me! Please!!!\e[0m"
+	fi
+	if [ $CLEAN -le 30 ]
+	then
+		echo -e "\e[31mI am dirty!!!\e[0m"
+	fi
+	if [ $HUNGER -le -1 ]
+	then
+		HUNGER=0
+	fi
+	if [ $FUN -le -1 ]
+	then
+		FUN=0
+	fi
+	if [ $CLEAN -le -1 ]
+	then
+		CLEAN=0
+	fi
+
+	echo
+	echo -e Press \\e[92mH\\e[0m to feed your monster!
+	echo -e Press \\e[33mF\\e[0m to play with monster!
+	echo -e Press \\e[94mC\\e[0m to wash your monster!
+	echo
+
+	if [ $RANDOM -le 900 ]
+	then
+		if [ $RANDOM -le 300 ]
+		then
+			HUNGER=$((HUNGER-1))
+		fi
+		if [ $RANDOM -le 700 ] && [ $RANDOM -gt 300 ]
+		then
+			FUN=$((FUN-1))
+		fi
+		if [ $RANDOM -ge 701 ]
+		then
+			CLEAN=$((CLEAN-1))
+		fi
+	fi
+	input="none"
+	read -rsn1 -t 1 input
+
+	if [ "$input" = "c" ]
+	then
+		echo -e \\e[94mCleaning!\\e[0m
+		CLEAN=$((CLEAN+1))
+		sleep 1
+	fi
+	if [ "$input" = "h" ]
+	then
+		echo -e \\e[92mFeeding!\\e[0m
+		HUNGER=$((HUNGER+1))
+		CLEAN=$((CLEAN-1))
+		sleep 1
+	fi
+	if [ "$input" = "f" ]
+	then
+		echo -e \\e[33mLets play!\\e[0m
+		FUN=$((FUN+1))
+		HUNGER=$((HUNGER-1))
+		CLEAN=$((CLEAN-1))
+		sleep 1
+	fi
+	input="none"
+	echo -e HUNGER=$HUNGER \\nFUN=$FUN \\nCLEAN=$CLEAN > data.txt
+	clear
+done
+
 while [ $LOOP -le 2 ]
 do
 	cat monster.txt
