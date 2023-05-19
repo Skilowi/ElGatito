@@ -16,7 +16,7 @@ Press H, F or C to Feed, Play with or Wash your monster.
 # Future Plans
 
 * More looks for monster - reaction for being hungry, bored etc
-* Support for translansions
+* ~~Support for translansions~~ - Done!
 * Support for animations
 * ~~Colors!~~ - Done!
 * Bibows (ha tfu) release 

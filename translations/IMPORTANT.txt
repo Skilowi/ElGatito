@@ -1,0 +1,23 @@
+Translating tutorial
+
+=== ALWAYS add spaces! ===
+
+without spaces result will look like this:
+
+Hunger:10
+Fun:10
+Cleanliness:10
+
+instead of this:
+
+Hunger:      10
+Fun:         10
+Cleanliness: 10
+
+See the difference? Lower one looks more readable, thats thanks to amount of Spaces after :
+
+Make sure in every line there is enough of them to make it look nice.
+
+=== If you want move back to default translation ===
+
+unpack default.zip and replace all (keep zip for later)
