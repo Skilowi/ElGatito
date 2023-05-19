@@ -1,0 +1,18 @@
+ok so um
+thats a explaination why every line is separate file
+
+My idea was that all translations will be in one file
+
+ill "cat" text from file line and then echo variable with for example fun
+
+but with cat you cant cat exact file line
+
+I had to use sed.
+
+But to make sed output colorful command looks like cat ran over keyboard/BrainFuck language.
+
+And i couldnt with command found in internet sed given line with color sooo
+
+i had to do this with this worst way for translator, but it works.
+
+Ill make script that will let translate easier, without editing all files manually.
